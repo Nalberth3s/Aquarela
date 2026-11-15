@@ -1,0 +1,162 @@
+import type { DevelopmentReport, Milestone, Observation } from '@/types'
+
+export const reportsMock: DevelopmentReport[] = [
+  {
+    id: 'r-01',
+    studentId: 's-01',
+    period: '1º semestre de 2026',
+    createdAt: '2026-07-08',
+    authorName: 'Fernanda Alves',
+    status: 'publicado',
+    summary:
+      'Maria Eduarda viveu um semestre de muitas descobertas. Está segura nas interações, participa das rodas com entusiasmo e demonstra enorme interesse pelas cores e pelas histórias com animais.',
+    assessments: [
+      { field: 'eu_outro_nos', level: 3, comment: 'Compartilha brinquedos e acolhe colegas novos com carinho.' },
+      { field: 'corpo_gestos', level: 3, comment: 'Sobe e desce do escorregador com autonomia e adora circuitos.' },
+      { field: 'tracos_sons_cores', level: 4, comment: 'Mistura cores com intenção e nomeia tons novos com alegria.' },
+      { field: 'escuta_fala', level: 3, comment: 'Amplia o vocabulário e reconta trechos de histórias conhecidas.' },
+      { field: 'espacos_tempos', level: 2, comment: 'Participa de contagens nas rodas e reconhece a sequência da rotina.' },
+    ],
+    highlights: ['Adaptação à nova sala concluída', 'Participação na Festa Junina', 'Interesse crescente por livros'],
+    nextSteps: ['Estimular a expressão de sentimentos com palavras', 'Ampliar a autonomia para guardar materiais'],
+  },
+  {
+    id: 'r-02',
+    studentId: 's-02',
+    period: '1º semestre de 2026',
+    createdAt: '2026-07-10',
+    authorName: 'Fernanda Alves',
+    status: 'publicado',
+    summary:
+      'Lucas Gabriel é observador e muito cuidadoso com os colegas. Destacou-se no projeto "De onde vêm os alimentos", com perguntas e registros em desenhos.',
+    assessments: [
+      { field: 'eu_outro_nos', level: 4, comment: 'Ajuda a mediar pequenos conflitos.' },
+      { field: 'corpo_gestos', level: 3, comment: 'Boa coordenação motora fina.' },
+      { field: 'tracos_sons_cores', level: 3, comment: 'Desenhos ricos em detalhes.' },
+      { field: 'escuta_fala', level: 3, comment: 'Reconhece o próprio nome escrito.' },
+      { field: 'espacos_tempos', level: 3, comment: 'Compara quantidades e conta até 10.' },
+    ],
+    highlights: ['Registro do crescimento do feijão na horta'],
+    nextSteps: ['Incentivar a escrita espontânea'],
+  },
+  {
+    id: 'r-03',
+    studentId: 's-06',
+    period: '1º semestre de 2026',
+    createdAt: '2026-07-11',
+    authorName: 'Lúcia Prado',
+    status: 'publicado',
+    summary: 'Alice concluiu o semestre com avanços em leitura de imagens e escrita do nome. É curiosa e persistente.',
+    assessments: [
+      { field: 'eu_outro_nos', level: 3, comment: 'Cooperativa em trabalhos em grupo.' },
+      { field: 'corpo_gestos', level: 3, comment: 'Participa com alegria das aulas de movimento.' },
+      { field: 'tracos_sons_cores', level: 3, comment: 'Gosta de modelagem com argila.' },
+      { field: 'escuta_fala', level: 4, comment: 'Escreve o nome completo e reconhece várias palavras.' },
+      { field: 'espacos_tempos', level: 3, comment: 'Identifica formas geométricas no ambiente.' },
+    ],
+    highlights: ['Escrita do nome completo'],
+    nextSteps: ['Ampliar repertório de gêneros textuais'],
+  },
+  {
+    id: 'r-04',
+    studentId: 's-03',
+    period: '2º semestre de 2026 (parcial)',
+    createdAt: '2026-09-20',
+    authorName: 'Fernanda Alves',
+    status: 'rascunho',
+    summary: 'Registro parcial em elaboração. Sofia tem se envolvido muito no ateliê de cores.',
+    assessments: [
+      { field: 'eu_outro_nos', level: 3, comment: 'Em observação.' },
+      { field: 'corpo_gestos', level: 3, comment: 'Em observação.' },
+      { field: 'tracos_sons_cores', level: 3, comment: 'Em observação.' },
+      { field: 'escuta_fala', level: 2, comment: 'Em observação.' },
+      { field: 'espacos_tempos', level: 2, comment: 'Em observação.' },
+    ],
+    highlights: [],
+    nextSteps: [],
+  },
+]
+
+export const observationsMock: Observation[] = [
+  {
+    id: 'o-01',
+    studentId: 's-01',
+    date: '2026-09-23',
+    authorName: 'Fernanda Alves',
+    kind: 'conquista',
+    field: 'escuta_fala',
+    text: 'Contou para a turma, com detalhes, como foi o passeio de fim de semana ao parque.',
+  },
+  {
+    id: 'o-02',
+    studentId: 's-01',
+    date: '2026-09-18',
+    authorName: 'Fernanda Alves',
+    kind: 'conquista',
+    field: 'tracos_sons_cores',
+    text: 'Descobriu o verde misturando azul e amarelo e quis repetir a experiência com as colegas.',
+  },
+  {
+    id: 'o-03',
+    studentId: 's-01',
+    date: '2026-09-11',
+    authorName: 'Fernanda Alves',
+    kind: 'atencao',
+    text: 'Um pouco mais sonolenta durante a manhã. Família avisada no momento da saída.',
+  },
+  {
+    id: 'o-04',
+    studentId: 's-02',
+    date: '2026-09-24',
+    authorName: 'Fernanda Alves',
+    kind: 'conquista',
+    field: 'espacos_tempos',
+    text: 'Organizou as sementes por tamanho e contou até 10 sem ajuda.',
+  },
+  {
+    id: 'o-05',
+    studentId: 's-04',
+    date: '2026-09-24',
+    authorName: 'Renata Alves',
+    kind: 'rotina',
+    text: 'Adaptação evoluindo bem: permaneceu o período completo e aceitou a mamadeira com a educadora.',
+  },
+  {
+    id: 'o-06',
+    studentId: 's-06',
+    date: '2026-09-19',
+    authorName: 'Lúcia Prado',
+    kind: 'conquista',
+    field: 'escuta_fala',
+    text: 'Leu sozinha o título do livro da semana.',
+  },
+]
+
+/** Jornada pedagógica (marcos do trimestre) exibida na Área da Família. */
+export const milestonesMock: Milestone[] = [
+  {
+    id: 'mi-01',
+    studentId: 's-01',
+    month: 'Setembro',
+    status: 'em_andamento',
+    title: 'Expressão Artística e Linguagem Oral',
+    description:
+      'Ampliação espontânea de vocabulário, contação de pequenos causos e experimentação de texturas plásticas.',
+  },
+  {
+    id: 'mi-02',
+    studentId: 's-01',
+    month: 'Agosto',
+    status: 'concluido',
+    title: 'Socialização e Autonomia Motora',
+    description: 'Guarda de brinquedos, uso de talheres com segurança e cooperação nas dinâmicas em grupo.',
+  },
+  {
+    id: 'mi-03',
+    studentId: 's-01',
+    month: 'Julho',
+    status: 'concluido',
+    title: 'Adaptação e Acolhimento na Rotina',
+    description: 'Vínculo afetivo sólido com as educadoras e compreensão dos horários de refeição e parque.',
+  },
+]

@@ -1,0 +1,98 @@
+import type { Notice, SchoolEvent } from '@/types'
+
+export const noticesMock: Notice[] = [
+  {
+    id: 'n-01',
+    title: 'Reunião de Pais e Mestres',
+    body: 'Sexta-feira, 3 de outubro, às 17h30, presencialmente na escola. Vamos conversar sobre o desenvolvimento das crianças no 3º bimestre.',
+    date: '2026-09-24',
+    authorName: 'Coordenação',
+    category: 'evento',
+    pinned: true,
+    rsvp: { eventDate: '2026-10-03', eventTime: '17h30', location: 'Presencial na escola' },
+  },
+  {
+    id: 'n-02',
+    title: 'Cardápio Nutricional da Semana',
+    body: 'Elaborado pela nutricionista escolar. Restrições alimentares devem ser atualizadas com a secretaria.',
+    date: '2026-09-22',
+    authorName: 'Secretaria',
+    category: 'cardapio',
+    attachmentName: 'cardapio-semana-39.pdf',
+  },
+  {
+    id: 'n-03',
+    title: 'Semana da Criança: programação',
+    body: 'De 5 a 9 de outubro teremos oficinas, piquenique, teatro de fantoches e o dia do brinquedo.',
+    date: '2026-09-21',
+    authorName: 'Coordenação',
+    category: 'evento',
+  },
+  {
+    id: 'n-04',
+    title: 'Maternal II: roupa extra na mochila',
+    body: 'Com as atividades de pintura e água desta semana, pedimos uma muda de roupa extra identificada com o nome da criança.',
+    date: '2026-09-19',
+    authorName: 'Fernanda Alves',
+    category: 'aviso',
+    classId: 'maternal-2',
+  },
+  {
+    id: 'n-05',
+    title: 'Jardim: projeto "Pequenos bichos"',
+    body: 'Iniciamos um projeto investigativo sobre insetos do jardim. Se puderem, enviem lupas ou livros sobre o tema.',
+    date: '2026-09-15',
+    authorName: 'Lúcia Prado',
+    category: 'pedagogico',
+    classId: 'jardim',
+  },
+]
+
+export const eventsMock: SchoolEvent[] = [
+  {
+    id: 'e-01',
+    title: 'Reunião de Pais e Mestres',
+    date: '2026-10-03',
+    time: '17h30',
+    description: 'Conversa sobre o 3º bimestre.',
+    location: 'Escola',
+  },
+  {
+    id: 'e-02',
+    title: 'Início da Semana da Criança',
+    date: '2026-10-05',
+    time: '8h',
+    description: 'Abertura com apresentação musical no pátio.',
+    location: 'Pátio',
+  },
+  {
+    id: 'e-03',
+    title: 'Piquenique no parque',
+    date: '2026-10-07',
+    time: '9h30',
+    description: 'Cada família envia uma fruta para compartilhar.',
+    location: 'Parque',
+  },
+  {
+    id: 'e-04',
+    title: 'Ateliê aberto às famílias — Maternal II',
+    date: '2026-10-14',
+    time: '16h',
+    description: 'Exposição das pinturas em aquarela da turma Girassol.',
+    classId: 'maternal-2',
+  },
+  {
+    id: 'e-05',
+    title: 'Feriado — Proclamação da República',
+    date: '2026-11-15',
+    description: 'Não haverá aula.',
+  },
+  {
+    id: 'e-06',
+    title: 'Mostra cultural de fim de ano',
+    date: '2026-12-05',
+    time: '16h',
+    description: 'Exposição dos projetos das turmas e apresentação musical.',
+    location: 'Escola',
+  },
+]

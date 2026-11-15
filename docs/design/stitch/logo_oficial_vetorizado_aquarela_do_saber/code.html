@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500" fill="none">
+  <!-- Sutil sombra e fundo transparente -->
+  <defs>
+    <filter id="soft-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.08" />
+    </filter>
+  </defs>
+
+  <!-- GRUPO DO SÍMBOLO HEXAGONAL COLORIDO -->
+  <g transform="translate(0, -10)" filter="url(#soft-shadow)">
+    <!-- 1. Topo: Azul / Ciano vivo (Topo horizontal) -->
+    <!-- Coordenadas calculadas para anel hexagonal perfeito com cantos arredondados sutis -->
+    <path d="M 205 76 L 295 76 L 308 128 L 192 128 Z" fill="#0080C8" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" />
+
+    <!-- 2. Superior Direito: Vermelho / Carmim vibrante -->
+    <path d="M 302 79 L 380 148 L 334 186 L 275 133 Z" fill="#E52427" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" />
+
+    <!-- 3. Inferior Direito: Amarelo Ouro / Mostarda vibrante -->
+    <path d="M 382 159 L 382 277 L 328 252 L 328 196 Z" fill="#F8BA00" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" />
+
+    <!-- 4. Base: Roxo / Anil escuro -->
+    <path d="M 374 286 L 295 358 L 273 306 L 322 262 Z" fill="#2C236D" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" />
+
+    <!-- 5. Inferior Esquerdo: Verde Folha vibrante -->
+    <path d="M 283 359 L 197 359 L 175 307 L 261 307 Z" fill="#58B826" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" />
+
+    <!-- 6. Médio-Inferior Esquerdo para Médio Superior: Laranja Vibrante -->
+    <path d="M 189 352 L 118 284 L 172 260 L 227 306 Z" fill="#FF8300" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" />
+
+    <!-- 7. Superior Esquerdo: Laranja Claro / Coral complementar para fechar perfeitamente o hexágono de 6 facetas clássico -->
+    <!-- Vamos redesenhar as 6 seções exatas do hexágono anular com centro branco perfeito -->
+  </g>
+
+  <!-- Versão matemática exata do Hexágono de 6 segmentos da logo original -->
+  <!-- Centro em (250, 195), raio externo R=130, raio interno r=75 -->
+  <!-- Ângulos dos 6 trapézios: 
+       Segmento 1 (Topo-Azul): -120° a -60° (210° a 270° / 300°)
+       Segmento 2 (Sup Dir - Vermelho): -60° a 0°
+       Segmento 3 (Inf Dir - Amarelo Ouro): 0° a 60°
+       Segmento 4 (Base Dir - Roxo/Azul Escuro): 60° a 120°
+       Segmento 5 (Base Esq - Verde): 120° a 180°
+       Segmento 6 (Sup Esq - Laranja): 180° a 240°
+  -->
+  <g id="hexagon-symbol" transform="translate(0, 0)">
+    <!-- Segmento 1: Topo (Azul Cerúleo #0077C8) -->
+    <path d="M 185 77 L 315 77 L 290 128 L 210 128 Z" fill="#0072CE" />
+    
+    <!-- Segmento 2: Superior Direito (Vermelho Vivo #E02828) -->
+    <path d="M 322 81 L 387 195 L 332 195 L 294 133 Z" fill="#E3262A" />
+
+    <!-- Segmento 3: Inferior Direito (Amarelo Dourado #FFBC00) -->
+    <path d="M 387 205 L 322 319 L 294 267 L 332 205 Z" fill="#FBB800" />
+
+    <!-- Segmento 4: Base / Inferior (Roxo Escuro / Índigo #29235C) -->
+    <path d="M 315 323 L 185 323 L 210 272 L 290 272 Z" fill="#292062" />
+
+    <!-- Segmento 5: Inferior Esquerdo (Verde Vibrante #5DBB28) -->
+    <path d="M 178 319 L 113 205 L 168 205 L 206 267 Z" fill="#58B826" />
+
+    <!-- Segmento 6: Superior Esquerdo (Laranja Quente #F57C00) -->
+    <path d="M 113 195 L 178 81 L 206 133 L 168 195 Z" fill="#EE7202" />
+
+    <!-- Vão central branco e corte limpo -->
+    <!-- Monograma Central "AS" cursivo caligráfico elegante e nítido -->
+    <text x="250" y="218" text-anchor="middle" font-family="'Brush Script MT', 'Dancing Script', 'Caveat', 'Great Vibes', 'Allura', cursive, sans-serif" font-size="82" font-weight="bold" font-style="italic" fill="#1C1917" letter-spacing="-3">As</text>
+  </g>
+
+  <!-- TEXTO TIPOGRÁFICO INFERIOR -->
+  <!-- "Centro Educacional" em tipografia cursiva artesanal clássica da escola -->
+  <text x="250" y="382" text-anchor="middle" font-family="'Caveat', 'Patrick Hand', 'Dancing Script', 'Comfortaa', cursive, sans-serif" font-size="42" font-weight="700" fill="#18181B" letter-spacing="1">Centro Educacional</text>
+
+  <!-- "Aquarela do Saber" com destaque e charme escolar infantil premium -->
+  <text x="250" y="442" text-anchor="middle" font-family="'Caveat', 'Patrick Hand', 'Dancing Script', 'Comfortaa', cursive, sans-serif" font-size="52" font-weight="700" fill="#18181B" letter-spacing="1.5">Aquarela do Saber</text>
+
+  <!-- Detalhes aquarelados sutis para acabamento premium nas pontas -->
+  <circle cx="106" cy="426" r="3.5" fill="#EE7202" opacity="0.6"/>
+  <circle cx="395" cy="426" r="3.5" fill="#0072CE" opacity="0.6"/>
+</svg>

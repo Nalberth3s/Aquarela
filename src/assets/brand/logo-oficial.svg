@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 470" fill="none">
+  <!-- Logo oficial — Centro Educacional Aquarela do Saber (vetorizada) -->
+  <path d="M185 37h130l-25 51h-80z" fill="#0072CE"/>
+  <path d="m322 41 65 114h-55l-38-62z" fill="#E3262A"/>
+  <path d="m387 165-65 114-28-52 38-62z" fill="#FBB800"/>
+  <path d="M315 283H185l25-51h80z" fill="#292062"/>
+  <path d="m178 279-65-114h55l38 62z" fill="#58B826"/>
+  <path d="m113 155 65-114 28 52-38 62z" fill="#EE7202"/>
+  <text x="250" y="186" text-anchor="middle" font-family="'Brush Script MT', cursive" font-size="92" font-style="italic" font-weight="700" fill="#1C1917" letter-spacing="-4">As</text>
+  <text x="250" y="362" text-anchor="middle" font-family="'Caveat', 'Comic Sans MS', cursive" font-size="44" font-weight="700" fill="#18181B">Centro Educacional</text>
+  <text x="250" y="428" text-anchor="middle" font-family="'Caveat', 'Comic Sans MS', cursive" font-size="54" font-weight="700" fill="#18181B">Aquarela do Saber</text>
+</svg>
