@@ -32,10 +32,10 @@ services:
       PUBLIC_URL: http://localhost:3333
       CORS_ORIGIN: http://localhost:5173
       UPLOADS_DIR: /app/uploads
-      # Acesso de desenvolvedor (aba "Banco" da coordenação). Senha guardada só como hash bcrypt
-      # ("$$" é o escape do "$" no compose). Sem essas duas variáveis a aba fica desativada.
-      DEV_EMAIL: ${DEV_EMAIL:-nalberthelias769@gmail.com}
-      DEV_PASSWORD_HASH: ${DEV_PASSWORD_HASH:-$$2b$$10$$MRZf5A.i48kYdSpQhuXW4OXSBXiIjuOffTfrUpOXjKJig9LiCpT8K}
+      # Acesso de desenvolvedor (aba "Banco" da coordenação). Valores no arquivo .env (fora do git);
+      # sem eles a aba fica desativada. Hash: docker compose exec api npm run hash-password -- 'senha'
+      DEV_EMAIL: ${DEV_EMAIL:-}
+      DEV_PASSWORD_HASH: ${DEV_PASSWORD_HASH:-}
     ports:
       - "3333:3333"
     volumes:

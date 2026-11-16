@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "tsx watch src/server.ts",
     "start": "tsx src/server.ts",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "hash-password": "tsx src/scripts/hash-password.ts"
   },
   "dependencies": {
     "@fastify/cors": "^11.3.0",

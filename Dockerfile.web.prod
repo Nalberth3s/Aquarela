@@ -1,0 +1,17 @@
+# Site em produção: build estático do Vite servido pelo nginx
+FROM node:24-alpine AS build
+WORKDIR /app
+COPY package.json package-lock.json ./
+RUN npm ci
+COPY . .
+# Variáveis VITE_* entram no build (não em runtime)
+ARG VITE_API_URL=""
+ARG VITE_USE_MOCKS="false"
+ARG VITE_SITE_URL="http://localhost"
+ENV VITE_API_URL=$VITE_API_URL VITE_USE_MOCKS=$VITE_USE_MOCKS VITE_SITE_URL=$VITE_SITE_URL
+RUN npm run build
+
+FROM nginx:alpine
+COPY deploy/nginx.conf /etc/nginx/conf.d/default.conf
+COPY --from=build /app/dist /usr/share/nginx/html
+EXPOSE 80

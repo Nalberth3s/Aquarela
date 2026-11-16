@@ -1,0 +1,59 @@
+# Aquarela do Saber — PRODUÇÃO (Easypanel / VPS)
+# Só o serviço "web" recebe domínio (porta 80). Ele serve o site e repassa /api e /uploads para a API.
+# Nada de "ports": quem expõe é o Traefik do Easypanel.
+name: aquarela
+
+services:
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: aquarela
+      POSTGRES_PASSWORD: ${DB_PASSWORD:?defina DB_PASSWORD}
+      POSTGRES_DB: aquarela
+      TZ: America/Sao_Paulo
+      PGTZ: America/Sao_Paulo
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U aquarela -d aquarela"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  api:
+    build: ./server
+    restart: unless-stopped
+    environment:
+      DATABASE_URL: postgres://aquarela:${DB_PASSWORD}@db:5432/aquarela
+      JWT_SECRET: ${JWT_SECRET:?defina JWT_SECRET}
+      PUBLIC_URL: ${SITE_URL:?defina SITE_URL}
+      CORS_ORIGIN: ${SITE_URL}
+      UPLOADS_DIR: /app/uploads
+      DEV_EMAIL: ${DEV_EMAIL:-}
+      DEV_PASSWORD_HASH: ${DEV_PASSWORD_HASH:-}
+    expose:
+      - "3333"
+    volumes:
+      - uploads:/app/uploads
+    depends_on:
+      db:
+        condition: service_healthy
+
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile.web.prod
+      args:
+        VITE_API_URL: ""
+        VITE_USE_MOCKS: "false"
+        VITE_SITE_URL: ${SITE_URL}
+    restart: unless-stopped
+    expose:
+      - "80"
+    depends_on:
+      - api
+
+volumes:
+  db-data:
+  uploads:

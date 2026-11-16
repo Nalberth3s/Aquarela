@@ -1,5 +1,10 @@
 import path from 'node:path'
 
+// Em produção o segredo dos tokens precisa ser próprio: o padrão está no repositório público.
+if (process.env.NODE_ENV === 'production' && (process.env.JWT_SECRET ?? '').length < 32) {
+  throw new Error('JWT_SECRET ausente ou curto demais (mínimo 32 caracteres) em produção.')
+}
+
 export const config = {
   port: Number(process.env.PORT ?? 3333),
   databaseUrl: process.env.DATABASE_URL ?? 'postgres://aquarela:aquarela@localhost:5432/aquarela',
